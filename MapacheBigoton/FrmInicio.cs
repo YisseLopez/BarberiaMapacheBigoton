@@ -16,5 +16,23 @@ namespace MapacheBigoton
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           // FrmAgregarCita agregarCita = new FrmAgregarCita(frmCitaRegistrada);
+          //  agregarCita.Show();
+          FrmAgregarCita agregarCita = new FrmAgregarCita();
+            agregarCita.Show();
+        }
+
+        private void btnCitasRegistradas_Click(object sender, EventArgs e)
+        {
+           // FrmCitasRegistradas.show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
