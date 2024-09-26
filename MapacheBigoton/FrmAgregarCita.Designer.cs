@@ -46,6 +46,8 @@
             dtpSeleccionarDia = new DateTimePicker();
             btnAgendar = new Button();
             btnCancelar = new Button();
+            label9 = new Label();
+            cbBarbero = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -68,7 +70,6 @@
             label1.Size = new Size(193, 22);
             label1.TabIndex = 9;
             label1.Text = "Nombre del cliente:";
-            label1.Click += label1_Click;
             // 
             // label3
             // 
@@ -187,17 +188,18 @@
             // btnAgendar
             // 
             btnAgendar.Font = new Font("Lucida Handwriting", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgendar.Location = new Point(416, 303);
+            btnAgendar.Location = new Point(204, 339);
             btnAgendar.Name = "btnAgendar";
             btnAgendar.Size = new Size(157, 48);
             btnAgendar.TabIndex = 23;
             btnAgendar.Text = "Agendar";
             btnAgendar.UseVisualStyleBackColor = true;
+            btnAgendar.Click += btnAgendar_Click;
             // 
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Lucida Handwriting", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.Location = new Point(614, 303);
+            btnCancelar.Location = new Point(471, 339);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(157, 48);
             btnCancelar.TabIndex = 24;
@@ -205,11 +207,31 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.Location = new Point(406, 266);
+            label9.Name = "label9";
+            label9.Size = new Size(203, 22);
+            label9.TabIndex = 25;
+            label9.Text = "Seleccionar barbero:";
+            // 
+            // cbBarbero
+            // 
+            cbBarbero.FormattingEnabled = true;
+            cbBarbero.Location = new Point(615, 266);
+            cbBarbero.Name = "cbBarbero";
+            cbBarbero.Size = new Size(168, 23);
+            cbBarbero.TabIndex = 26;
+            // 
             // FrmAgregarCita
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(855, 423);
+            Controls.Add(cbBarbero);
+            Controls.Add(label9);
             Controls.Add(btnCancelar);
             Controls.Add(btnAgendar);
             Controls.Add(dtpSeleccionarDia);
@@ -253,5 +275,7 @@
         private DateTimePicker dtpSeleccionarDia;
         private Button btnAgendar;
         private Button btnCancelar;
+        private Label label9;
+        private ComboBox cbBarbero;
     }
 }
