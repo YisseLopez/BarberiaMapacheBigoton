@@ -12,9 +12,26 @@ namespace MapacheBigoton
 {
     public partial class FrmAgregarCita : Form
     {
+        public class Cita
+        {
+            public string NombreCliente { get; set; }
+            public string Telefono { get; set; }
+
+            
+        }
         public FrmAgregarCita()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
