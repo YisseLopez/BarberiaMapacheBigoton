@@ -88,6 +88,14 @@ namespace MapacheBigoton
             txtCostoServicio.Clear();
             cbHora.Items.Clear();
             cbBarbero.Items.Clear();
+
+            //istaCitas.Add(nuevaCita);
+            MessageBox.Show("Cita agendada correctamente");
+
+            FrmCitasRegistradas frmCitasRegistradas = new FrmCitasRegistradas();
+            frmCitasRegistradas.Show();
+            this.Close();
         }
+
     }
 }
