@@ -27,7 +27,7 @@ namespace MapacheBigoton
 
         private void btnCitasRegistradas_Click(object sender, EventArgs e)
         {
-           // FrmCitasRegistradas.show();
+          // FrmCitasRegistradas.show();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
