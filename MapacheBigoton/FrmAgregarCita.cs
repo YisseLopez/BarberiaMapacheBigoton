@@ -28,11 +28,12 @@ namespace MapacheBigoton
         public FrmAgregarCita()
         {
             InitializeComponent();
-            cbTipoServicio();
-            cbHorario();
+            comboboxTipoServicio();
+            comboboxHorario();
+            comboboxBarbero();
             
         }
-        private void cbTipoServicio()
+        private void comboboxTipoServicio()
         {
             cbServicioSolicitado.Items.Add("Corte de cabello");
             cbServicioSolicitado.Items.Add("Afeitado");
@@ -41,7 +42,7 @@ namespace MapacheBigoton
             cbServicioSolicitado.Items.Add("Depilacion de ceja y barba");
         }
 
-        private void cbHorario()
+        private void comboboxHorario()
         {
             cbHora.Items.Add("09:00 AM");
             cbHora.Items.Add("10:00 AM");
@@ -53,6 +54,14 @@ namespace MapacheBigoton
             cbHora.Items.Add("04:00 PM");
         }
 
+        private void comboboxBarbero()
+        {
+            cbBarbero.Items.Add("Yissel");
+            cbBarbero.Items.Add("Karen");
+            cbBarbero.Items.Add("Lesly");
+            cbBarbero.Items.Add("Carmen");
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -60,7 +69,25 @@ namespace MapacheBigoton
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
+            Cita nuevaCita = new Cita()
+            {
+                NombreCliente = txtNombreCliente.Text,
+                Telefono = txtTelefono.Text,
+                ServicioSolicitado = cbServicioSolicitado.SelectedItem.ToString(),
+                Costo = Convert.ToDecimal(txtCostoServicio.Text),
+                // Fecha = dtpSeleccionarDia.Value.Date.Add(DateTime.Parse(cbHora.SelectedItem.ToString()).TimeOfDay),
+                Fecha = dtpSeleccionarDia.Value,
+                Barbero = cbBarbero.SelectedItem.ToString(),
+                Hora = cbHora.SelectedItem.ToString(),
+            };
 
+            //FrmCitasRegistradas.AgregarCita(nuevaCita);
+            txtNombreCliente.Clear();
+            txtTelefono.Clear();
+            cbServicioSolicitado.Items.Clear();
+            txtCostoServicio.Clear();
+            cbHora.Items.Clear();
+            cbBarbero.Items.Clear();
         }
     }
 }
