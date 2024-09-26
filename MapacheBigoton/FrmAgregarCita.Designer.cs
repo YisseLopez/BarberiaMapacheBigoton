@@ -147,10 +147,13 @@
             // 
             // cbServicioSolicitado
             // 
+            cbServicioSolicitado.DropDownStyle = ComboBoxStyle.DropDownList;
             cbServicioSolicitado.FormattingEnabled = true;
+            cbServicioSolicitado.IntegralHeight = false;
             cbServicioSolicitado.Location = new Point(230, 249);
             cbServicioSolicitado.Name = "cbServicioSolicitado";
             cbServicioSolicitado.Size = new Size(159, 23);
+            cbServicioSolicitado.Sorted = true;
             cbServicioSolicitado.TabIndex = 18;
             // 
             // txtCostoServicio
@@ -162,6 +165,7 @@
             // 
             // cbHora
             // 
+            cbHora.DropDownStyle = ComboBoxStyle.DropDownList;
             cbHora.FormattingEnabled = true;
             cbHora.Location = new Point(603, 165);
             cbHora.Name = "cbHora";
@@ -219,6 +223,7 @@
             // 
             // cbBarbero
             // 
+            cbBarbero.DropDownStyle = ComboBoxStyle.DropDownList;
             cbBarbero.FormattingEnabled = true;
             cbBarbero.Location = new Point(615, 266);
             cbBarbero.Name = "cbBarbero";
