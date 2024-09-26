@@ -60,6 +60,14 @@ namespace MapacheBigoton
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
+            Cita nuevaCita = new Cita()
+            {
+                NombreCliente = txtNombreCliente.Text,
+                Telefono = txtTelefono.Text,
+                ServicioSolicitado = cbServicioSolicitado.SelectedItem.ToString(),
+                Costo = Convert.ToDecimal(txtCostoServicio.Text),
+                Fecha = dtpSeleccionarDia.Value.Date.Add(DateTime.Parse(cbHora.SelectedItem.ToString()).TimeOfDay)
+            };
 
         }
     }
