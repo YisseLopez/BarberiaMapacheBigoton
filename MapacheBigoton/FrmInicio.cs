@@ -23,7 +23,7 @@ namespace MapacheBigoton
         {
            // FrmAgregarCita agregarCita = new FrmAgregarCita(frmCitaRegistrada);
           //  agregarCita.Show();
-          FrmAgregarCita agregarCita = new FrmAgregarCita();
+          FrmAgregarCita agregarCita = new FrmAgregarCita(frmCitasRegistradas);
             agregarCita.Show();
         }
 

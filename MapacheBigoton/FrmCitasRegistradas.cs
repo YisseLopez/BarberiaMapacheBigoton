@@ -31,8 +31,12 @@ namespace MapacheBigoton
                 cita.NombreCliente,
                 cita.Telefono,
                 cita.ServicioSolicitado,
-                cita.Hora
+                cita.Costo.ToString("C"),
+                cita.Hora,
+                cita.Fecha.ToShortDateString(),
+                cita.Barbero
             };
+            dgvCitasAgendadas.Rows.Add(row);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
