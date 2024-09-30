@@ -12,6 +12,7 @@ namespace MapacheBigoton
 {
     public partial class FrmAgregarCita : Form
     {
+        private FrmCitasRegistradas _frmCitasRegistradas;
         public class Cita
         {
             public string NombreCliente { get; set; }
@@ -25,12 +26,13 @@ namespace MapacheBigoton
             public static List<Cita> listaCitas = new List<Cita>();
 
         }
-        public FrmAgregarCita()
+        public FrmAgregarCita(FrmCitasRegistradas frmCitasRegistradas)
         {
             InitializeComponent();
             comboboxTipoServicio();
             comboboxHorario();
             comboboxBarbero();
+            _frmCitasRegistradas = frmCitasRegistradas;
             
         }
         private void comboboxTipoServicio()
@@ -81,7 +83,9 @@ namespace MapacheBigoton
                 Hora = cbHora.SelectedItem.ToString(),
             };
 
-            //FrmCitasRegistradas.AgregarCita(nuevaCita);
+            _frmCitasRegistradas.AgregarCita(nuevaCita);
+            MessageBox.Show("Cita agendada correctamente");
+
             txtNombreCliente.Clear();
             txtTelefono.Clear();
             cbServicioSolicitado.Items.Clear();
@@ -90,7 +94,7 @@ namespace MapacheBigoton
             cbBarbero.Items.Clear();
 
             //istaCitas.Add(nuevaCita);
-            MessageBox.Show("Cita agendada correctamente");
+            
 
             FrmCitasRegistradas frmCitasRegistradas = new FrmCitasRegistradas();
             frmCitasRegistradas.Show();
