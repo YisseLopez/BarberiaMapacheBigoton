@@ -15,7 +15,7 @@ namespace MapacheBigoton
         public FrmCitasRegistradas()
         {
             InitializeComponent();
-            dgvCitasAgendadas.ColumnCount = 6;
+            dgvCitasAgendadas.ColumnCount = 7;
             dgvCitasAgendadas.Columns[0].Name = "Nombre del cliente";
             dgvCitasAgendadas.Columns[1].Name = "Telefono";
             dgvCitasAgendadas.Columns[2].Name = "Servicio solicitado";

@@ -12,9 +12,11 @@ namespace MapacheBigoton
 {
     public partial class FrmInicio : Form
     {
+        private FrmCitasRegistradas frmCitasRegistradas;
         public FrmInicio()
         {
             InitializeComponent();
+            frmCitasRegistradas = new FrmCitasRegistradas();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,7 +29,10 @@ namespace MapacheBigoton
 
         private void btnCitasRegistradas_Click(object sender, EventArgs e)
         {
-          // FrmCitasRegistradas.show();
+            // FrmCitasRegistradas.show();
+            // FrmCitasRegistradas registrarCita = new FrmCitasRegistradas();
+            //registrarCita.Show();
+            frmCitasRegistradas.Show();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
