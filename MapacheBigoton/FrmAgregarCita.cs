@@ -88,17 +88,20 @@ namespace MapacheBigoton
 
             txtNombreCliente.Clear();
             txtTelefono.Clear();
-            cbServicioSolicitado.Items.Clear();
+            //cbServicioSolicitado.Items.Clear();
             txtCostoServicio.Clear();
-            cbHora.Items.Clear();
-            cbBarbero.Items.Clear();
+            //cbHora.Items.Clear();
+            //cbBarbero.Items.Clear();
+            cbServicioSolicitado.SelectedIndex = -1;
+            cbBarbero.SelectedIndex = -1;
+            cbHora.SelectedIndex = -1;
 
             //istaCitas.Add(nuevaCita);
             
 
-            FrmCitasRegistradas frmCitasRegistradas = new FrmCitasRegistradas();
-            frmCitasRegistradas.Show();
-            this.Close();
+            //FrmCitasRegistradas frmCitasRegistradas = new FrmCitasRegistradas();
+            //frmCitasRegistradas.Show();
+           // this.Close();
         }
 
     }
