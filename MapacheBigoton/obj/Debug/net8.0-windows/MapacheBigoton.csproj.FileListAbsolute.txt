@@ -39,3 +39,12 @@ C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\
 C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheBigoton.genruntimeconfig.cache
 C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\ref\MapacheBigoton.dll
 C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheBigoton.Login.resources
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\MapacheBigoton.dll.config
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheBigoton.csproj.AssemblyReference.cache
+C:\Users\lesly\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheB.279E2AFB.Up2Date

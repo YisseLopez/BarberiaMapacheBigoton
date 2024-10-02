@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MapacheBigoton
 {
@@ -77,31 +78,55 @@ namespace MapacheBigoton
                 Telefono = txtTelefono.Text,
                 ServicioSolicitado = cbServicioSolicitado.SelectedItem.ToString(),
                 Costo = Convert.ToDecimal(txtCostoServicio.Text),
-                // Fecha = dtpSeleccionarDia.Value.Date.Add(DateTime.Parse(cbHora.SelectedItem.ToString()).TimeOfDay),
                 Fecha = dtpSeleccionarDia.Value,
                 Barbero = cbBarbero.SelectedItem.ToString(),
                 Hora = cbHora.SelectedItem.ToString(),
             };
 
-            _frmCitasRegistradas.AgregarCita(nuevaCita);
-            MessageBox.Show("Cita agendada correctamente");
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["BarberiaBD"].ConnectionString;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO Citas (NombreCliente, Telefono, ServicioSolicitado, Costo, Fecha, Barbero, Hora) " +
+                                   "VALUES (@NombreCliente, @Telefono, @ServicioSolicitado, @Costo, @Fecha, @Barbero, @Hora)";
 
-            txtNombreCliente.Clear();
-            txtTelefono.Clear();
-            //cbServicioSolicitado.Items.Clear();
-            txtCostoServicio.Clear();
-            //cbHora.Items.Clear();
-            //cbBarbero.Items.Clear();
-            cbServicioSolicitado.SelectedIndex = -1;
-            cbBarbero.SelectedIndex = -1;
-            cbHora.SelectedIndex = -1;
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@NombreCliente", nuevaCita.NombreCliente);
+                        command.Parameters.AddWithValue("@Telefono", nuevaCita.Telefono);
+                        command.Parameters.AddWithValue("@ServicioSolicitado", nuevaCita.ServicioSolicitado);
+                        command.Parameters.AddWithValue("@Costo", nuevaCita.Costo);
+                        command.Parameters.AddWithValue("@Fecha", nuevaCita.Fecha);
+                        command.Parameters.AddWithValue("@Barbero", nuevaCita.Barbero);
+                        command.Parameters.AddWithValue("@Hora", nuevaCita.Hora);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                _frmCitasRegistradas.AgregarCita(nuevaCita);
+                MessageBox.Show("Cita agendada correctamente");
+
+                txtNombreCliente.Clear();
+                txtTelefono.Clear();
+                txtCostoServicio.Clear();
+                cbServicioSolicitado.SelectedIndex = -1;
+                cbBarbero.SelectedIndex = -1;
+                cbHora.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+            }
 
             //istaCitas.Add(nuevaCita);
-            
+
 
             //FrmCitasRegistradas frmCitasRegistradas = new FrmCitasRegistradas();
             //frmCitasRegistradas.Show();
-           // this.Close();
+            // this.Close();
         }
 
     }
