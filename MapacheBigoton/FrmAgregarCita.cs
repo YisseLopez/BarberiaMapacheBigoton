@@ -105,9 +105,11 @@ namespace MapacheBigoton
                         command.ExecuteNonQuery();
                     }
                 }
-
+                _frmCitasRegistradas = new();
                 _frmCitasRegistradas.AgregarCita(nuevaCita);
+                _frmCitasRegistradas.Refrescar();
                 MessageBox.Show("Cita agendada correctamente");
+                _frmCitasRegistradas.Show();
 
                 txtNombreCliente.Clear();
                 txtTelefono.Clear();

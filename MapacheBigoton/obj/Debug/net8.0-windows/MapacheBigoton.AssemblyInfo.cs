@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MapacheBigoton")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49cda5fbbc4f31f007b801b058ef20d461c8035e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e032d7c9e572370c5fbff201bf2e36a04a0b8682")]
 [assembly: System.Reflection.AssemblyProductAttribute("MapacheBigoton")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MapacheBigoton")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
