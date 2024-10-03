@@ -38,3 +38,4 @@ C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\
 C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheBigoton.pdb
 C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheBigoton.genruntimeconfig.cache
 C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\ref\MapacheBigoton.dll
+C:\Users\dylsi\OneDrive\Documentos\GitHub\BarberiaMapacheBigoton\MapacheBigoton\obj\Debug\net8.0-windows\MapacheBigoton.Login.resources

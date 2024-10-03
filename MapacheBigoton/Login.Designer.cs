@@ -37,6 +37,7 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -83,6 +84,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(249, 27);
             textBox1.TabIndex = 9;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -90,6 +92,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(249, 27);
             textBox2.TabIndex = 10;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
@@ -122,11 +125,24 @@
             label5.TabIndex = 13;
             label5.Text = "MapacheBigoton";
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.AppWorkspace;
+            button1.Cursor = Cursors.Hand;
+            button1.Location = new Point(316, 446);
+            button1.Name = "button1";
+            button1.Size = new Size(160, 32);
+            button1.TabIndex = 14;
+            button1.Text = "Iniciar sesion ";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 526);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -155,5 +171,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private Button button1;
     }
 }
