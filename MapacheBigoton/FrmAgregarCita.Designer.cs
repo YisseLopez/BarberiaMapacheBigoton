@@ -54,16 +54,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Ravie", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(284, 45);
+            label2.BackColor = Color.DarkGray;
+            label2.Font = new Font("Ravie", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(64, 0, 64);
+            label2.Location = new Point(190, 35);
             label2.Name = "label2";
-            label2.Size = new Size(440, 43);
+            label2.Size = new Size(478, 48);
             label2.TabIndex = 6;
             label2.Text = "Agendar Nueva Cita";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.DarkGray;
             label1.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.Location = new Point(31, 166);
             label1.Name = "label1";
@@ -74,6 +77,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.DarkGray;
             label3.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label3.Location = new Point(133, 204);
             label3.Name = "label3";
@@ -84,6 +88,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.DarkGray;
             label4.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.Location = new Point(45, 246);
             label4.Name = "label4";
@@ -94,6 +99,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.DarkGray;
             label5.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label5.Location = new Point(48, 285);
             label5.Name = "label5";
@@ -104,6 +110,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.DarkGray;
             label6.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label6.Location = new Point(440, 215);
             label6.Name = "label6";
@@ -114,6 +121,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.DarkGray;
             label7.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.Location = new Point(426, 166);
             label7.Name = "label7";
@@ -123,8 +131,9 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(118, 12);
+            pictureBox1.Location = new Point(45, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(117, 112);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -175,6 +184,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.DarkGray;
             label8.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label8.Location = new Point(228, 285);
             label8.Name = "label8";
@@ -191,29 +201,32 @@
             // 
             // btnAgendar
             // 
+            btnAgendar.BackColor = Color.LawnGreen;
             btnAgendar.Font = new Font("Lucida Handwriting", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgendar.Location = new Point(204, 339);
             btnAgendar.Name = "btnAgendar";
             btnAgendar.Size = new Size(157, 48);
             btnAgendar.TabIndex = 23;
             btnAgendar.Text = "Agendar";
-            btnAgendar.UseVisualStyleBackColor = true;
+            btnAgendar.UseVisualStyleBackColor = false;
             btnAgendar.Click += btnAgendar_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = Color.Red;
             btnCancelar.Font = new Font("Lucida Handwriting", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.Location = new Point(471, 339);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(157, 48);
             btnCancelar.TabIndex = 24;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.DarkGray;
             label9.Font = new Font("Century Gothic", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label9.Location = new Point(406, 266);
             label9.Name = "label9";
@@ -234,6 +247,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGreen;
+            BackgroundImage = Properties.Resources.Barberia;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(855, 423);
             Controls.Add(cbBarbero);
             Controls.Add(label9);
@@ -255,6 +271,7 @@
             Controls.Add(label1);
             Controls.Add(label2);
             Name = "FrmAgregarCita";
+            RightToLeftLayout = true;
             Text = "FrmAgregarCita";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
