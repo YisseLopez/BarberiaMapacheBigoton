@@ -81,12 +81,66 @@ namespace MapacheBigoton
                 cita.Fecha.ToShortDateString(),
                 cita.Barbero
             };
-           dgvCitasAgendadas.Rows.Add(row);
+            dgvCitasAgendadas.Rows.Add(row);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+                if (dgvCitasAgendadas.SelectedRows.Count > 0) // Verifica que haya una fila seleccionada
+                {
+                    // Obtiene los datos de la fila seleccionada
+                    string nombreCliente = dgvCitasAgendadas.SelectedRows[0].Cells["Nombre del cliente"].Value.ToString();
+                    string telefono = dgvCitasAgendadas.SelectedRows[0].Cells["Telefono"].Value.ToString();
+
+                    // Confirmar la eliminación
+                    DialogResult resultado = MessageBox.Show("¿Está seguro de que desea eliminar esta cita?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            // Eliminar de la base de datos
+                            using (SqlConnection connection = new SqlConnection(connectionString))
+                            {
+                                connection.Open();
+                                string query = "DELETE FROM Citas WHERE NombreCliente = @NombreCliente AND Telefono = @Telefono";
+
+                                using (SqlCommand command = new SqlCommand(query, connection))
+                                {
+                                    command.Parameters.AddWithValue("@NombreCliente", nombreCliente);
+                                    command.Parameters.AddWithValue("@Telefono", telefono);
+
+                                    int filasAfectadas = command.ExecuteNonQuery();
+
+                                    if (filasAfectadas > 0)
+                                    {
+                                        // Si la cita se eliminó de la base de datos, eliminar la fila del DataGridView
+                                        dgvCitasAgendadas.Rows.RemoveAt(dgvCitasAgendadas.SelectedRows[0].Index);
+                                        MessageBox.Show("Cita eliminada correctamente.");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("No se pudo eliminar la cita. Inténtelo de nuevo.");
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Ocurrió un error al eliminar la cita: " + ex.Message);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione una cita para eliminar.");
+                }
+            }
+
+        }
     }
-}

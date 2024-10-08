@@ -30,7 +30,7 @@ namespace MapacheBigoton
         private void btnCitasRegistradas_Click(object sender, EventArgs e)
         {
             // FrmCitasRegistradas.show();
-            // FrmCitasRegistradas registrarCita = new FrmCitasRegistradas();
+           //rmCitasRegistradas registrarCita = new FrmCitasRegistradas();
             //registrarCita.Show();
             frmCitasRegistradas.Show();
         }
