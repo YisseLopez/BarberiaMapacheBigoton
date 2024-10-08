@@ -67,7 +67,7 @@
             dgvCitasAgendadas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCitasAgendadas.Location = new Point(12, 141);
             dgvCitasAgendadas.Name = "dgvCitasAgendadas";
-            dgvCitasAgendadas.Size = new Size(764, 194);
+            dgvCitasAgendadas.Size = new Size(776, 194);
             dgvCitasAgendadas.TabIndex = 17;
             // 
             // btnSalir
